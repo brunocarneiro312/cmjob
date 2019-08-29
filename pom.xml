@@ -16,6 +16,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <quartz.version>2.3.0</quartz.version>
+        <log4j.version>1.2.17</log4j.version>
     </properties>
 
     <dependencies>
@@ -30,6 +31,12 @@
             <artifactId>quartz</artifactId>
             <version>${quartz.version}</version>
         </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -62,6 +69,7 @@
                     <version>2.22.1</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>3.2.2</version>
                 </plugin>
@@ -92,6 +100,7 @@
         <!-- filter -->
         <filters>
             <filter>src/main/resources/env/config.${env}.properties</filter>
+            <filter>src/main/resources/env/log4j.${env}.properties</filter>
         </filters>
         <!-- resources -->
         <resources>
