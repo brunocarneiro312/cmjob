@@ -4,6 +4,12 @@ import org.quartz.JobDetail;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
 
+/**
+ * -----------------------------------
+ * Serviço de processamento de pedidos
+ * -----------------------------------
+ * @author bruno.carneiro
+ */
 public interface SchedulerService {
 
     /**

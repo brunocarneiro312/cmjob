@@ -11,7 +11,7 @@ import org.quartz.SchedulerException;
 
 public class Application {
 
-    static Logger logger = Logger.getLogger(Application.class);
+    private static Logger logger = Logger.getLogger(Application.class);
 
     private static SchedulerService schedulerService = new SchedulerServiceImpl();
     private static JobBoletoTrigger jobBoletoTrigger = new JobBoletoTriggerImpl();

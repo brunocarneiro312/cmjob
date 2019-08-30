@@ -7,12 +7,6 @@ import org.quartz.SchedulerException;
 import org.quartz.Trigger;
 import org.quartz.impl.StdSchedulerFactory;
 
-/**
- * -----------------------------------
- * Serviço de processamento de pedidos
- * -----------------------------------
- * @author bruno.carneiro
- */
 public class SchedulerServiceImpl implements SchedulerService {
 
     @Override
