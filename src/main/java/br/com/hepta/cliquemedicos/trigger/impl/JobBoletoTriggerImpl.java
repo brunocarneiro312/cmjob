@@ -5,7 +5,19 @@ import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 
+import java.io.IOException;
+import java.util.Properties;
+import java.util.logging.Logger;
+
 public class JobBoletoTriggerImpl implements JobBoletoTrigger {
+
+
+
+    Properties properties = null;
+
+    public JobBoletoTriggerImpl() {
+
+    }
 
     @Override
     public Trigger trigger() throws Exception {
