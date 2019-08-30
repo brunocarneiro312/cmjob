@@ -15,10 +15,15 @@ public class JobBoletoTriggerImpl implements JobBoletoTrigger {
 
     Properties properties = null;
 
+    // Nome da propriedade que define intervalo de execução do Job
     private final String INTERVAL_PROPERTY = "jobBoleto.seconds";
 
+    // Variável que armazena o intervalo de execução
     private int interval;
 
+    /**
+     * Lendo o arquivo properties e setando o intervalo de execução do job
+     */
     public JobBoletoTriggerImpl() {
         this.properties = new Properties();
         try {
@@ -31,7 +36,7 @@ public class JobBoletoTriggerImpl implements JobBoletoTrigger {
     }
 
     @Override
-    public Trigger trigger() throws Exception {
+    public Trigger trigger() {
         try {
             return TriggerBuilder
                     .newTrigger()
